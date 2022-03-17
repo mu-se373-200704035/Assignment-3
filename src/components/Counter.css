@@ -2,13 +2,13 @@
     display: flex;
 }
 .counter-button{
-    padding: 5px 20px;
+    padding: .5rem 1rem;
     border: none;
     font-size: 2rem;
     color: #444;
 }
 .counter-count{
-    min-width: 5em;
+    min-width: 4em;
     display: flex;
     align-items: center;
     justify-content: center;
