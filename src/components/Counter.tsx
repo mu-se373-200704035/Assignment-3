@@ -1,40 +1,33 @@
-import { IonButton } from '@ionic/react';
-import React from 'react';
-import './Counter.css';
+import React from "react";
 
-interface ContainerProps { }
+import "./Counter.css";
+import plus from "../assets/plus-icon.svg";
+import minus from "../assets/minus-icon.svg";
 
-const Counter = () => {
-  
-    const [ count, setCount ] = React.useState(0);
-  
-    const decrementCounter = () => {
-        if(count>0){
-            setCount((prevCount) => {
-                return prevCount -1;
+
+export default function Counter() {
+
+    const [count, setCount] = React.useState(0);
+
+    function updateCount(num : number){
+        if(!(num===-1 && count===0)){
+            setCount((prevCount)=>{
+                return prevCount + num;
             })
         }
     }
 
-    const incrementCounter = () => {
-        setCount((prevCount) => {
-            return prevCount +1;
-        })
-    }
-  
-    
-
-    return (
-    <div className="counter-wrapper">
+    return(
         <div className="counter">
-            <IonButton className="counter-button" onClick={ decrementCounter }>-</IonButton>
-            <div className="count">
-            <h3>{ count }</h3>
+            <button onClick={ ()=>updateCount(-1) } className="counter-button">
+                <img src={ minus } alt=""/>
+            </button>
+            <div className="counter-count">
+                <h3>{ count }</h3>
             </div>
-            <IonButton className="counter-button" onClick={ incrementCounter }>+</IonButton>
+            <button onClick={ ()=> updateCount(1) } className="counter-button">
+                <img src={ plus } alt=""/>
+            </button>
         </div>
-    </div>
-  );
-};
-
-export default Counter;
+    )
+}

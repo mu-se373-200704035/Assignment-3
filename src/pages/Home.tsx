@@ -2,25 +2,21 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 
-//components
-import Counter from '../components/Counter';
-
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Assignment 3</IonTitle>
+          <IonTitle>Assingment 3</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen className="content">
+      <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Assignment 3</IonTitle>
           </IonToolbar>
         </IonHeader>
         <ExploreContainer />
-        <Counter />
       </IonContent>
     </IonPage>
   );

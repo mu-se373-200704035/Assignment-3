@@ -1,19 +1,15 @@
-.counter-wrapper{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%);
-}
 .counter{
     display: flex;
-    left: 50%;
-    transform: translateX(-50%);
-    align-items: center;
-    justify-content: center;
-}
-.count{
-    padding: 5px 10px;
 }
 .counter-button{
-    --background: brown;
+    padding: 5px 20px;
+    border: none;
+    font-size: 2rem;
+    color: #444;
+}
+.counter-count{
+    min-width: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
