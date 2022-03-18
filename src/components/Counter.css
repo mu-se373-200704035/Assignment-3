@@ -6,6 +6,10 @@
     border: none;
     font-size: 2rem;
     color: #444;
+    transition: 100ms ease-in-out;
+}
+.counter-button:active{
+    background: #c4c4c4;
 }
 .counter-count{
     min-width: 4em;
